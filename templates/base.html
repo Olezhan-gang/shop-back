@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap"
+      rel="stylesheet"
+    />
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__inner">
+        <a href="#" class="logo">
+          <img src="./images/logo__header.svg" alt="" class="logo__img" />
+        </a>
+        <nav class="menu">
+          <ul class="menu__list">
+            <li class="menu__list-item">
+              <a href="#" class="menu__list-link">About Us</a>
+            </li>
+            <li class="menu__list-item">
+              <a href="#" class="menu__list-link">T-shitr</a>
+            </li>
+            <li class="menu__list-item">
+              <a href="#" class="menu__list-link">Reviews</a>
+            </li>
+            <li class="menu__list-item">
+              <a href="#" class="menu__list-link">Contacts</a>
+            </li>
+            <li class="menu__list-item">
+              <a href="#" class="menu__list-link">
+                <img src="./images/search.svg" alt="" class="search__img" />
+              </a>
+            </li>
+            <li class="menu__list-item">
+              <a href="#" class="menu__list-link"
+                ><img src="./images/cart.svg" alt="" class="cart__img" />
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+		{% block body %}{% endblock %}
+  </body>
+</html>
