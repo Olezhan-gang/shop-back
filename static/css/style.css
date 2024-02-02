@@ -29,7 +29,7 @@ ul {
 }
 
 .container {
-  max-width: 1240px;
+  max-width: 1640px;
   padding-left: 20px;
   padding-right: 20px;
   margin: 0 auto;
@@ -45,6 +45,7 @@ ul {
 .menu__list {
   display: flex;
   gap: 30px;
+  margin-right: 200px;
 }
 
 .logo__img {
@@ -64,14 +65,53 @@ ul {
   color: grey;
 }
 
+/* Blockquote */
+
+.blockquote__text {
+  text-align: center;
+  font-size: 40px;
+  font-style: italic;
+  max-width: 704px;
+  margin: 130px auto;
+}
+
+/* T-shirts */
+
+.t__shirt-inner {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+}
+
+.t__shirt-list {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  gap: 100px;
+  margin: 10px;
+}
+
+.t__shirt-img {
+  width: 300px;
+  height: auto;
+  /* border: 1px solid #ddd;  */
+  /* border-radius: 5px;   */
+}
+
+.t__shirt-text {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
 /* Add stuff */
 
 .add__product {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh;
-  background-color: #f4f4f4;
+  /* height: 65vh; */
+  /* background-color: #f4f4f4; */
   flex-wrap: wrap;
 }
 
@@ -110,4 +150,17 @@ button {
 
 button:hover {
   background-color: #0056b3;
+}
+
+/* Footer */
+
+.footer__inner {
+  margin-top: 150px;
+}
+
+.footer__list {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  gap: 30px;
 }
