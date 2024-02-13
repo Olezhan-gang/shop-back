@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<section class="add__menu">
+	<div class="container">
+	  <div class="add__menu-inner">
+		<div class="first__frame">
+		  <ul class="add__menu-list">
+			<li class="add__menu-item">
+			  <a class="add__menu-link" href="#">
+				<button class="add__menu-button">Active orders</button>
+			  </a>
+			</li>
+			<li class="add__menu-item">
+			  <a class="add__menu-link" href="#">
+				<button class="add__menu-button">History orders</button>
+			  </a>
+			</li>
+		  </ul>
+		</div>
+		<div class="second__frame">
+		  <table>
+			<thead>
+			  <tr>
+				<th>DATA</th>
+				<th>ORDER ID</th>
+				<th>DETAILS</th>
+				<th>ARTICLES</th>
+				<th>PAYED</th>
+				<th>CLOSE</th>
+			  </tr>
+			</thead>
+			<tbody>
+			  <tr>
+				<td>...</td>
+				<td>...</td>
+				<td>...</td>
+				<td>...</td>
+				<td>...</td>
+				<td>...</td>
+			  </tr>
+			  <tr>
+				<td>...</td>
+				<td>...</td>
+				<td>...</td>
+				<td>...</td>
+				<td>...</td>
+				<td>...</td>
+			  </tr>
+			  <!-- You can add more rows here -->
+			</tbody>
+		  </table>
+		</div>
+	  </div>
+	</div>
+  </section>
+
+{% endblock %}

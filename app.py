@@ -1,10 +1,12 @@
 from flask import Flask, render_template, redirect, session,request,url_for, send_from_directory
 
 from mysql import add_article, get_all_articles
+from tgbot import send_notification
 
 import uuid
 
 import os
+
 
 app = Flask(__name__)
 
@@ -40,5 +42,11 @@ def upload_file():
     except Exception as ex:
          print(str(ex))
     return redirect(url_for('index'))
+
+@app.route('/article/<string:uuid>')
+def admin_panel(uuid):
+    return render_template('article.html', image = uuid)
+
+
 if __name__ == "__main__":
 	app.run(debug=True)
