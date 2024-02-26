@@ -37,9 +37,16 @@ def get_all_articles():
                 result = cursor.fetchall()
                 return result
 
-           
+def get_article(uuid):
+    connection = establish_connection()
+    with connection:
+        with connection.cursor() as cursor:
+                select_query = "SELECT * FROM article WHERE image = %s "
+                cursor.execute(select_query,(uuid))
+                result = cursor.fetchall()
+                return result
+
 def generate_orderid():
-    
     timestamp = int(time.time())
     random_part = str(random.randint(10000, 99999))
     current_date = datetime.datetime.now()

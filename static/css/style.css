@@ -44,13 +44,13 @@ ul {
 
 .menu__list {
   display: flex;
-  gap: 30px;
+  gap: 50px;
   margin-right: 200px;
 }
 
-.logo__img {
+/* .logo__img {
   margin-right: 100px;
-}
+} */
 
 .search__img {
   margin-left: 90px;
@@ -115,31 +115,27 @@ ul {
   flex-wrap: wrap;
 }
 
-.form-container {
+.add-article__container {
   background-color: #fff;
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
-form {
+.add__article-form {
   display: flex;
   flex-direction: column;
 }
-
-label {
+.add__article-label {
   margin-bottom: 5px;
 }
-
-input,
-textarea {
+.add-article__input {
   margin-bottom: 10px;
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 3px;
 }
 
-button {
+.button__add {
   padding: 10px;
   background-color: #007bff;
   color: #fff;
@@ -148,19 +144,533 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.button__add:hover {
   background-color: #0056b3;
 }
+*/
 
 /* Footer */
 
-.footer__inner {
+footer {
+  background-color: white;
+  /* background-color: #222; */
   margin-top: 150px;
+  padding: 10px;
 }
 
 .footer__list {
   display: flex;
   text-align: center;
   justify-content: center;
+  gap: 50px;
+  font-size: 20px;
+  /* margin-left: 200px;  */
+}
+
+.footer__list-link {
+  color: black;
+  transition: color 0.3s;
+}
+
+.footer__list-link:hover {
+  color: grey;
+}
+
+.footer-info {
+  font-size: 20px;
+  margin-top: 40px;
+  color: black;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+/* Search */
+
+.search__inner {
+  text-align: center;
+}
+
+.form__search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input__search {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px 0 0 5px;
+}
+
+/* Cart */
+
+/* Contact us */
+
+.contacts {
+  margin-top: 100px;
+}
+
+.contact__inner {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.contact__us {
+  font-size: 40px;
+}
+
+.form-container {
+  text-align: center;
+}
+
+.form__contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin: 0 10px 10px 0;
+  text-align: center;
+  width: calc(50% - 10px);
+}
+
+.label__contact {
+  display: block;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.input__contact,
+.textarea__contact {
+  width: 100%;
+  outline: none;
+  padding: 8px;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid black;
+  border-radius: 0;
+  margin-bottom: 10px;
+  transition: 0.3s ease;
+}
+
+.input__contact:focus,
+.textarea__contact:focus {
+  border-color: black;
+}
+
+.button__contact {
+  background-color: blaCK;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  border-radius: 15px;
+  padding: 15px 40px;
+  font-size: 20px;
+}
+
+/* Logo */
+
+/* .logo__img {
+  margin-left: 2px;
+} */
+
+/* Release section */
+
+.release__section {
+  margin-top: 150px;
+  margin-bottom: 90px;
+}
+
+.realese__head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.realese__form-container {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.email__form {
+  margin-top: 40px;
+}
+
+.email__input {
+  width: 400px;
+  padding: 8px;
+  border: none;
+  border-bottom: 2px solid black;
+  border-radius: 4px;
+  transition: bottom 0.3s;
+  outline: none;
+  font-size: 18px;
+}
+
+.email__input::placeholder {
+  font-size: 18px;
+}
+
+.email__label {
+  position: absolute;
+  margin-left: 10px;
+  margin-top: 6px;
+  color: #777;
+}
+
+.submit__button {
+  background-color: transparent;
+  color: black;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+/* .submit__button:hover {
+  background-color: grey;
+} */
+
+.arrow {
+  font-size: 16px;
+  margin-left: 5px;
+}
+
+/* Add menu */
+
+.first__frame {
+  width: 453px;
+  height: 763px;
+  background-color: rgba(217, 217, 217, 1);
+  border-radius: 15px;
+  border: none;
+  box-sizing: border-box;
+}
+
+.second__frame {
+  width: 1074px;
+  height: 763px;
+  background-color: rgba(217, 217, 217, 1);
+  border-radius: 15px;
+  border: none;
+  box-sizing: border-box;
+}
+
+.add__menu-inner {
+  display: flex;
+  gap: 100px;
+}
+
+.add__menu-item {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.add__menu-link {
+  margin-right: 30px;
+}
+
+.add__menu-button {
+  margin-bottom: 20px;
+  background-color: grey;
+  color: white;
+  font-size: 15px;
+  padding: 10px 130px;
+  cursor: pointer;
+  border-radius: 15px;
+  border: none;
+}
+
+/* Table for menu */
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #dddddd;
+}
+th,
+td {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+th {
+  background-color: #f2f2f2;
+}
+
+td {
+  background-color: #f2f2f2;
+}
+
+/* Detail about t-shirt */
+
+.detail__tshirt {
+  margin-top: 100px;
+}
+
+.detail__tshirt-inner {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  gap: 120px;
+}
+
+.container__detail {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail__tshirt-img {
+  max-width: 600px;
+  height: 600px;
+}
+
+.detail__tshirt-inner {
+  display: flex;
+}
+
+.detail__tshirt-name {
+  margin: 0;
+  font-size: 40px;
+  text-align: left;
+}
+
+.detail__tshirt-price {
+  margin: 0;
+  text-align: left;
+  font-size: 25px;
+}
+
+.detail__tshirt-size {
+  margin-top: 20px;
+  text-align: left;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.detail__tshirt-choose {
+  text-align: left;
+}
+
+.detail__tshirt-input[type="radio"] {
+  display: none;
+}
+
+.detail__tshirt-input[type="radio"] + .detail__tshirt-label {
+  cursor: pointer;
+  display: inline-block;
+  padding: 7px 12px;
+  width: 60px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  margin-right: 10px;
+  transition: 0.3s ease;
+}
+
+.detail__tshirt-input[type="radio"]:checked + .detail__tshirt-label {
+  border-color: grey;
+  /* color: transparent; */
+}
+
+/* Button detail_tshirt */
+
+.detail__tshirt-button {
+  margin-top: 30px;
+  background-color: transparent;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 30px;
+  font-size: 20px;
+}
+
+/* Info */
+
+.detail__tshirt-info__head {
+  text-align: left;
+  margin-top: 30px;
+}
+
+.detail__tshirt-text__info {
+  text-align: left;
+  width: 400px;
+  margin: 0;
+}
+
+.detail__tshirt-text__info-more {
+  text-align: left;
+}
+
+.detail__tshirt-text__info-size {
+  margin: 0;
+  text-align: left;
+}
+
+/* Size chart */
+
+.detail__tshirt-table {
+  border-collapse: collapse;
+  max-width: 400px;
+  background-color: transparent;
+  margin-top: 40px;
+  font-size: 22px;
+}
+
+.detail__tshirt-th,
+.detail__tshirt-td {
+  border: 1px solid black;
+  text-align: left;
+  padding: 8px;
+  background-color: transparent;
+}
+
+/* Or try these */
+
+.or__try-these-head {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin-top: 150px;
+  margin-bottom: 80px;
+}
+
+.or__try-these-img {
+  width: 500px;
+  height: 500px;
+}
+
+.or__try-these-list {
+  display: flex;
   gap: 30px;
+  text-align: center;
+  margin-bottom: 120px;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+.or__try-these-text {
+  margin: 10px;
+  font-size: 25px;
+}
+
+/* Notification */
+
+.cart {
+  position: relative;
+}
+
+.cart__img {
+  transform: 0.2s ease;
+}
+
+.cart-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: grey;
+  color: white;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Shopping cart */
+
+.shopping__cart-inner {
+  margin: 80px auto;
+}
+
+.shopping__cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: none;
+}
+
+.shopping__cart-img {
+  width: 200px;
+  height: 200px;
+}
+
+.shopping__cart-tshirt {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.shopping__cart-th {
+  text-align: left;
+  padding: 5px;
+  color: white;
+  background-color: #242629;
+  font-weight: normal;
+}
+
+.shopping__cart-td {
+  padding: 10px 5px;
+  text-align: left;
+  background-color: white;
+}
+
+.shopping__cart-td input {
+  width: 40px;
+  height: 30px;
+  padding: 5px;
+}
+
+.shopping__cart-td a {
+  font-size: 18px;
+  color: crimson;
+}
+
+.shopping__cart-change {
+  text-align: left;
+  margin-left: 18px;
+}
+
+.shopping__cart-p {
+  margin: 0;
+}
+
+.shopping__cart-td,
+.shopping__cart-th {
+  border: none;
+}
+
+.shopping__cart-td img {
+  width: 150px;
+  height: 150px;
+}
+
+.total-price {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.total-price table {
+  border-top: 3px solid #242629;
+  width: 100%;
+  max-width: 350px;
+}
+
+.shopping__cart-td:last-child {
+  text-align: right;
+}
+
+.shopping__cart-th:last-child {
+  text-align: right;
 }

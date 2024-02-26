@@ -1,52 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap"
-      rel="stylesheet"
-    />
-    <title>{% block title %}{% endblock %}</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
-  </head>
-  <body>
-    <header class="header">
-      <div class="container header__inner">
-        <a href="#" class="logo">
-          <img src="./images/logo__header.svg" alt="" class="logo__img" />
-        </a>
-        <nav class="menu">
-          <ul class="menu__list">
-            <li class="menu__list-item">
-              <a href="#" class="menu__list-link">About Us</a>
-            </li>
-            <li class="menu__list-item">
-              <a href="#" class="menu__list-link">T-shitr</a>
-            </li>
-            <li class="menu__list-item">
-              <a href="#" class="menu__list-link">Reviews</a>
-            </li>
-            <li class="menu__list-item">
-              <a href="#" class="menu__list-link">Contacts</a>
-            </li>
-            <li class="menu__list-item">
-              <a href="#" class="menu__list-link">
-                <img src="./images/search.svg" alt="" class="search__img" />
-              </a>
-            </li>
-            <li class="menu__list-item">
-              <a href="#" class="menu__list-link"
-                ><img src="./images/cart.svg" alt="" class="cart__img" />
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap"
+			rel="stylesheet"
+		/>
+		<title>{% block title %}{% endblock %}</title>
+		<link
+			rel="stylesheet"
+			href="{{ url_for('static', filename='css/style.css') }}"
+		/>
+	</head>
+	<body>
+		<header class="header">
+			<div class="container header__inner">
+				<a href="/" class="logo">
+					<img
+						style="max-width: 120px; min-height: 120px"
+						src="{{ url_for('static', filename='img/IMG_1712.png') }}"
+						alt=""
+						class="logo__img"
+					/>
+				</a>
+				<nav class="menu">
+					<ul class="menu__list">
+						<li class="menu__list-item">
+							<a href="#" class="menu__list-link">About Us</a>
+						</li>
+						<li class="menu__list-item">
+							<a href="#" class="menu__list-link">T-shirt</a>
+						</li>
+						<li class="menu__list-item">
+							<a href="#" class="menu__list-link">Reviews</a>
+						</li>
+						<li class="menu__list-item">
+							<a href="./contact.html" class="menu__list-link">Contacts</a>
+						</li>
+						<!-- <li class="menu__list-item">
+              <div class="search__inner">
+                <form action="#" method="get">
+                  <input
+                    type="text"
+                    id="search"
+                    name="search"
+                    placeholder="Search..."
+                  />
+                </form>
+              </div>
+            </li> -->
+						<li class="menu__list-item">
+							<a href="#" class="menu__list-link"
+								><img
+									src="{{ url_for('static', filename='img/cart.svg') }}"
+									alt=""
+									class="cart__img"
+								/>
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
 		{% block body %}{% endblock %}
-  </body>
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__inner">
+					<ul class="footer__list">
+						<li class="footer__list-item">
+							<a href="#" class="footer__list-link">Privacy Policy</a>
+						</li>
+						<li class="footer__list-item">
+							<a href="#" class="footer__list-link">Refund Policy</a>
+						</li>
+						<li class="footer__list-item">
+							<a href="#" class="footer__list-link">Terms of Service</a>
+						</li>
+						<li class="footer__list-item">
+							<a href="#" class="footer__list-link">Copyrights</a>
+						</li>
+					</ul>
+					<div class="footer-info">
+						<p>© 2024 DEATH PUMP. All Rights Reserved.</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
 </html>

@@ -1,6 +1,6 @@
 from flask import Flask, render_template, redirect, session,request,url_for, send_from_directory
 
-from mysql import add_article, get_all_articles
+from mysql import *
 from tgbot import send_notification
 
 import uuid
@@ -44,9 +44,17 @@ def upload_file():
     return redirect(url_for('index'))
 
 @app.route('/article/<string:uuid>')
-def admin_panel(uuid):
-    return render_template('article.html', image = uuid)
+def article(uuid):
+    print(get_article(uuid))
+    return render_template('article.html', article = get_article(uuid))
 
+@app.route('/admin')
+def admin_panel():
+    return render_template('admin.html')
+
+@app.route('/cart')
+def cart():
+    return render_template('cart.html')
 
 if __name__ == "__main__":
 	app.run(debug=True)

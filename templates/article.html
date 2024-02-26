@@ -1,7 +1,164 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} {% block body %}
+<section class="detail__tshirt">
+	<div class="container">
+		<div class="detail__tshirt-inner">
+			{% for data in article %}
+			<img
+				src="{{ url_for('uploaded_file', filename=data.image + '.png') }}"
+				alt=""
+				class="detail__tshirt-img"
+			/>
+			<div class="container__detail">
+				<h3 class="detail__tshirt-name">{{ data.name}}</h3>
+				<h6 class="detail__tshirt-price">{{ article.price }}</h6>
+				<h6 class="detail__tshirt-size">Size {{ article.image }}</h6>
+				<div class="detail__tshirt-choose">
+					<input
+						class="detail__tshirt-input"
+						type="radio"
+						id="size-xs"
+						name="size"
+						value="XS"
+					/>
+					<label class="detail__tshirt-label" for="size-xs">XS</label>
 
-{% block body %}
+					<input
+						class="detail__tshirt-input"
+						type="radio"
+						id="size-s"
+						name="size"
+						value="S"
+					/>
+					<label class="detail__tshirt-label" for="size-s">S</label>
 
-img
+					<input
+						class="detail__tshirt-input"
+						type="radio"
+						id="size-m"
+						name="size"
+						value="M"
+					/>
+					<label class="detail__tshirt-label" for="size-m">M</label>
 
+					<input
+						class="detail__tshirt-input"
+						type="radio"
+						id="size-l"
+						name="size"
+						value="L"
+					/>
+					<label class="detail__tshirt-label" for="size-l">L</label>
+
+					<input
+						class="detail__tshirt-input"
+						type="radio"
+						id="size-xl"
+						name="size"
+						value="XL"
+					/>
+					<label class="detail__tshirt-label" for="size-xl">XL</label>
+				</div>
+				{% endfor %}
+				<button class="detail__tshirt-button">Add to cart</button>
+				<h3 class="detail__tshirt-info__head">We believe in the long term.</h3>
+				<h5 class="detail__tshirt-text__info">
+					Our products made of high quality materials and printed with the best
+					machinery, an ultra smooth cotton blend to ensure the comfort and
+					durability.
+				</h5>
+				<h5 class="detail__tshirt-text__info-more">- High quality printing</h5>
+				<h5 class="detail__tshirt-text__info-size">SIZE CHART</h5>
+				<table class="detail__tshirt-table">
+					<thead>
+						<tr>
+							<th class="detail__tshirt-th">SIZE</th>
+							<th class="detail__tshirt-th">HEIGHT</th>
+							<th class="detail__tshirt-th">WEIGHT</th>
+							<th class="detail__tshirt-th">WAIST</th>
+							<th class="detail__tshirt-th">HIP WDTH</th>
+							<th class="detail__tshirt-th">INSEAM</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="detail__tshirt-td">S</td>
+							<td class="detail__tshirt-td">5'3-5'5</td>
+							<td class="detail__tshirt-td">130-145</td>
+							<td class="detail__tshirt-td">30-37.5</td>
+							<td class="detail__tshirt-td">43</td>
+							<td class="detail__tshirt-td">5</td>
+						</tr>
+						<tr>
+							<td class="detail__tshirt-td">M</td>
+							<td class="detail__tshirt-td">5'5-5'7</td>
+							<td class="detail__tshirt-td">145-155</td>
+							<td class="detail__tshirt-td">30.5-38.5</td>
+							<td class="detail__tshirt-td">44</td>
+							<td class="detail__tshirt-td">5</td>
+						</tr>
+						<tr>
+							<td class="detail__tshirt-td">L</td>
+							<td class="detail__tshirt-td">5'7-5'9</td>
+							<td class="detail__tshirt-td">155-165</td>
+							<td class="detail__tshirt-td">32-40</td>
+							<td class="detail__tshirt-td">45</td>
+							<td class="detail__tshirt-td">5</td>
+						</tr>
+						<tr>
+							<td class="detail__tshirt-td">XL</td>
+							<td class="detail__tshirt-td">5'9-6'</td>
+							<td class="detail__tshirt-td">165-175</td>
+							<td class="detail__tshirt-td">33-41</td>
+							<td class="detail__tshirt-td">46.5</td>
+							<td class="detail__tshirt-td">5</td>
+						</tr>
+						<tr>
+							<td class="detail__tshirt-td">XXL</td>
+							<td class="detail__tshirt-td">6'-6'2</td>
+							<td class="detail__tshirt-td">180-195</td>
+							<td class="detail__tshirt-td">34-42</td>
+							<td class="detail__tshirt-td">47.5</td>
+							<td class="detail__tshirt-td">5</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="or__try-these">
+	<div class="or__try-these-inner">
+		<h2 class="or__try-these-head">OR TRY THESE</h2>
+		<ul class="or__try-these-list">
+			<li class="or__try-these-item">
+				<a href="#" class="or__try-these-link">
+					<img src="./images/t__shirt.png" alt="" class="or__try-these-img" />
+					<h5 class="or__try-these-text">TEXT</h5>
+					<h6 class="or__try-these-text">price</h6>
+				</a>
+			</li>
+			<li class="or__try-these-item">
+				<a href="#" class="or__try-these-link">
+					<img src="./images/t__shirt.png" alt="" class="or__try-these-img" />
+					<h5 class="or__try-these-text">TEXT</h5>
+					<h6 class="or__try-these-text">price</h6>
+				</a>
+			</li>
+			<li class="or__try-these-item">
+				<a href="#" class="or__try-these-link">
+					<img src="./images/t__shirt.png" alt="" class="or__try-these-img" />
+					<h5 class="or__try-these-text">TEXT</h5>
+					<h6 class="or__try-these-text">price</h6>
+				</a>
+			</li>
+			<li class="or__try-these-item">
+				<a href="#" class="or__try-these-link">
+					<img src="./images/t__shirt.png" alt="" class="or__try-these-img" />
+					<h5 class="or__try-these-text">TEXT</h5>
+					<h6 class="or__try-these-text">price</h6>
+				</a>
+			</li>
+		</ul>
+	</div>
+</section>
 {% endblock %}

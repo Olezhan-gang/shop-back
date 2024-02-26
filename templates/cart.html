@@ -1,0 +1,54 @@
+{% extends 'base.html' %} {% block body %}
+<section class="shopping__cart">
+	<div class="container">
+		<div class="shopping__cart-inner">
+			<table class="shopping__cart-table">
+				<tr>
+					<th class="shopping__cart-th">Product</th>
+					<th class="shopping__cart-th">Quantity</th>
+					<th class="shopping__cart-th">Subtotal</th>
+				</tr>
+
+				<tr>
+					<td class="shopping__cart-td">
+						<div class="shopping__cart-tshirt">
+							<img
+								src="./images/t__shirt.png"
+								alt=""
+								class="shopping__cart-img"
+							/>
+							<div class="shopping__cart-change">
+								<p class="shopping__cart-p">The name of t-shirt</p>
+								<small>price</small>
+								<br />
+								<a href="">Remove</a>
+							</div>
+						</div>
+					</td>
+					<td class="shopping__cart-td">
+						<input type="number" min="1" value="1" />
+					</td>
+					<td class="shopping__cart-td">price$</td>
+				</tr>
+			</table>
+			<div class="total-price">
+				<table class="shopping__cart-table">
+					<tr>
+						<td class="shopping__cart-td">Subtotal</td>
+						<td class="shopping__cart-td">price$</td>
+					</tr>
+					<tr>
+						<td class="shopping__cart-td">Tax</td>
+						<td class="shopping__cart-td">price$</td>
+					</tr>
+					<tr>
+						<td class="shopping__cart-td">Total</td>
+						<td class="shopping__cart-td">price$</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+</section>
+
+{% endblock %}
